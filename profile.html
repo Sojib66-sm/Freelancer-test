@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profile - SkillBridge</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo-sidebar">SkillBridge</div>
+
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-item">🏠 Home</a>
+                <a href="#" class="nav-item">🔍 Browse Jobs</a>
+                <a href="#" class="nav-item">📋 My Bids</a>
+                <a href="#" class="nav-item">⭐ My Skills</a>
+                <a href="#" class="nav-item">💰 Earnings</a>
+                <a href="#" class="nav-item">🛎️ Notifications</a>
+                <a href="settings.html" class="nav-item">⚙️ Settings</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-info" onclick="window.location.href='profile.html'" style="cursor:pointer">
+                    <div class="user-avatar">👨‍💻</div>
+                    <div>
+                        <p class="user-name">Alex Chen</p>
+                        <p class="user-role">Freelancer</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search jobs, freelancers, or skills..." />
+                </div>
+                <div class="top-right">
+                    <button class="icon-btn">🛎️</button>
+                    <div class="profile-dropdown">
+                        <div class="user-profile" onclick="toggleDropdown()">
+                            <span class="user-name-top">Alex Chen</span>
+                            <div class="avatar-small">👨‍💻</div>
+                        </div>
+                        <div id="dropdownMenu" class="dropdown-menu">
+                            <a href="profile.html"><span>👤</span> My Profile</a>
+                            <a href="settings.html"><span>⚙️</span> Settings</a>
+                            <a href="index.html" onclick="logout()" style="color:red"><span>➡️ </span> Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Profile Page -->
+            <div class="profile-container">
+                <div class="profile-header">
+                    <img src="https://via.placeholder.com/120" alt="Alex Chen" class="profile-avatar-big">
+                    <div class="profile-info">
+                        <h1>Alex Chen</h1>
+                        <p>Full-stack developer specializing in React and Node.js</p>
+                        <p class="meta">⭐ 4.9 • Joined 6/15/2025</p>
+                    </div>
+                    <button class="btn btn-primary edit-btn">Edit Profile</button>
+                </div>
+
+                <div class="profile-body">
+                    <!-- About Me -->
+                    <div class="profile-card">
+                        <h2>About Me</h2>
+                        <p>Passionate developer with 5+ years of experience building modern web applications. I love
+                            creating clean, efficient, and user-friendly solutions.</p>
+                    </div>
+
+                    <!-- Portfolio -->
+                    <div class="profile-card">
+                        <h2>Portfolio</h2>
+                        <div class="portfolio-grid">
+                            <div class="portfolio-item">
+                                <h3>E-commerce Platform</h3>
+                                <p>Built a full-stack e-commerce solution</p>
+                            </div>
+                            <div class="portfolio-item">
+                                <h3>Task Management App</h3>
+                                <p>Created a collaborative task management tool</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Verified Skills -->
+                    <div class="profile-card">
+                        <h2>Verified Skills</h2>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Web Development</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>UI/UX Design</span>
+                                <span>92%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 92%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                              <!-- Stats -->
+          <div class="profile-card">
+            <h2>Stats</h2>
+            <div class="stats-grid-small">
+              <div class="stat-box">
+                <span>Total Earned</span>
+                <strong>$45,000</strong>
+              </div>
+              <div class="stat-box">
+                <span>Profile Views</span>
+                <strong>1,250</strong>
+              </div>
+              <div class="stat-box">
+                <span>Hourly Rate</span>
+                <strong>$75/hr</strong>
+              </div>
+            </div>
+          </div>
+
+                    <!-- Work History -->
+                    <div class="profile-card">
+                        <h2>Work History & Reviews</h2>
+                        <div class="review-item">
+                            <h4>Website Development</h4>
+                            <p class="client">Sarah Johnson • 2/20/2026</p>
+                            <p>"Excellent work! Alex delivered ahead of schedule and the quality was outstanding."</p>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
